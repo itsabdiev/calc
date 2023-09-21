@@ -1,7 +1,9 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javafx.event.EventHandler;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 
-public class Controller implements ActionListener {
+
+public class Controller implements EventHandler<ActionEvent> {
     private final Model model;
     public Controller(View view) {
         System.out.println("Controller is ready");
@@ -9,7 +11,10 @@ public class Controller implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        System.out.println(e.getActionCommand());
+    public void handle(ActionEvent event) {
+        Button button = (Button) event.getSource();
+        Button button1 = (Button) event.getTarget();
+        System.out.println(button.getText());
+        System.out.println(button1.getText());
     }
 }

@@ -33,6 +33,7 @@ public class View  extends Pane {
         Button button0 = createButton("0", 16.0, 528.0,"#333333",126.0,"#ebeae9");
         Button buttonDot = createButton(".", 158.0, 528.0,"#333333",55.0,"#ebeae9");
         Button buttonEquals = createButton("=", 229.0, 528.0,"#ff9f0a",55.0,"#ebeae9");
+        button0.setOnAction(controller);
         button0.setAlignment(Pos.CENTER_LEFT);
         button0.setPadding(new Insets(0,0,0,20));
         Label label = new Label("40");
